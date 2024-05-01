@@ -5,6 +5,8 @@
 
 
 def caesar_cipher(text, shift):
+
+    # Программа написана под АНГЛИЙСКИЙ ТЕКСТ!!!
     
     encrypted_text = ""
     for char in text:
