@@ -1,5 +1,5 @@
 #!/usr/bin/env python
-# coding: utf-8
+# coding: cp-1251
 
 # In[ ]:
 
