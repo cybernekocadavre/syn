@@ -43,11 +43,11 @@ def main():
     text = input("Введите текст для зашифровки: ")
     
     while True:
-        shift = int(input("Введите значение сдвига"))
-        if shift.isdigit():
+        shift = int(input("Введите значение сдвига: "))
+        try:
             shift = int(shift)
             break
-        else:
+        except ValueError:
             print("Вводимый сдвиг должен быть типа int!")
         
     encrypted_text = caesar_cipher(text, shift)
