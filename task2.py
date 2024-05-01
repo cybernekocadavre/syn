@@ -31,7 +31,7 @@ def caesar_break_cipher(encrypted_text):
 def main():
     encrypted_text = input("Введите зашифрованный текст: ")
     decryption = caesar_break_cipher(encrypted_text)
-    print("Возможное оригинальное сообщение:")
+    print("Возможное оригинальное сообщение: ", decryption)
     
 if __name__ == "__main__":
     main()
