@@ -3,6 +3,7 @@
 
 # In[ ]:
 
+from task1 import caesar_cipher, caesar_decipher
 
 def caesar_break_cipher(encrypted_text):
     decrypted_texts = []
@@ -20,43 +21,3 @@ def main():
 
 if __name__ == "__main__":
     main()
-
-#---------------------------------------------------
-
-def caesar_cipher(text, shift):
-
-    # Программа написана под АНГЛИЙСКИЙ ТЕКСТ!!!
-    
-    encrypted_text = ""
-    for char in text:
-        
-        # Проверяем, является ли символ буквой
-        if char.isalpha():
-            
-            # Определяем смещение для каждой буквы
-            shifted = ord(char) + shift
-            
-            # Если выходим за пределы алфавита, возвращаемся к его началу
-            if char.islower():
-                if shifted > ord('z'):
-                    shifted -= 26
-                elif shifted < ord('a'):
-                    shifted += 26
-                    
-            elif char.isupper():
-                if shifted > ord('Z'):
-                    shifted -= 26
-                elif shifted < ord('A'):
-                    shifted += 26
-                    
-            encrypted_text += chr(shifted)
-            
-        else:
-            # Если символ не является буквой, просто добавляем его в зашифрованный текст
-            encrypted_text += char
-            
-    return encrypted_text
-
-def caesar_decipher(text, shift):
-    return caesar_cipher(text, -shift)
-
